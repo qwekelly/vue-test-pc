@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./images/logo.png">
+    <img alt="Vue logo" src="../images/logo.png">
     <h1>Welcome to Your Vue.js App</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -33,14 +33,12 @@
 
 <script>
 export default {
-  name: 'homepage',
   props: {
     msg: String
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   h3 {
     margin: 40px 0 0;

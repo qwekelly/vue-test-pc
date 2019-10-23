@@ -1,24 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import routes from './routes'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'homepage',
-      component: () => import('./views/home/index.vue')
-    },
-    {
-      path: '/home',
-      name: 'homepage',
-      component: () => import('./views/home/index.vue')
-    },
-    {
-      path: '/three',
-      name: 'about',
-      component: () => import('./views/three/index.vue')
-    }
-  ]
+const router = new Router({
+  mode: 'history',
+  base: process.env.VUE_APP_BASE_PATH,
+  routes,
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'active'
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Wesley的个人空间'
+  next()
+})
+
+export default router
