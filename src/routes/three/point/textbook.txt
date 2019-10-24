@@ -1,0 +1,12 @@
+1、buffergeometry与Geometry 相比优势与劣势是什么？
+  BufferGeometry 会缓存网格模型，性能要高效点。
+  (1)、Geometry 生成的模型是这样的 （代码）-> (CUP 进行数据处理，转化成虚拟3D数据) -> (GPU 进行数据组装，转化成像素点，准备渲染) -> 显示器
+  第二次操作时重复走这些流程。
+
+  (2)、BufferGeometry 生成模型流程 (代码) -> (CUP 进行数据处理，转化成虚拟3D数据) -> (GPU 进行数据组装，转化成像素点，准备渲染) -> (丢入缓存区) -> 显示器
+  第二次修改时，通过API直接修改缓存区数据，流程就变成了这样
+  (代码) -> (CUP 进行数据处理，转化成虚拟3D数据) -> (修改缓存区数据) -> 显示器
+
+
+2、Three.js加载.obj模型文件: https://segmentfault.com/a/1190000019487254
+3、基于three.js的3D粒子动效实现: https://cloud.tencent.com/developer/article/1411000

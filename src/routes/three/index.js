@@ -17,6 +17,13 @@ export default {
         title: '3d场景页面'
       },
       component: () => import('./css3d_panorama')
+    },
+    {
+      path: 'point',
+      meta: {
+        title: '粒子效果'
+      },
+      component: () => import('./point')
     }
   ]
 }
