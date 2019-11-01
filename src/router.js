@@ -13,7 +13,7 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Wesley的个人空间'
+  document.title = to.meta.title || 'three.js 调研'
   next()
 })
 

@@ -49,6 +49,8 @@ export default {
       geometry.computeBoundingSphere()
       //
       var material = new THREE.PointsMaterial({ size: 15, vertexColors: THREE.VertexColors })
+      console.log(geometry)
+      console.log(material)
       this.points = new THREE.Points(geometry, material)
       this.scene.add(this.points)
       //
@@ -56,7 +58,7 @@ export default {
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.setSize(window.innerWidth / 2, window.innerHeight / 2) // 设置canvas画布的大小
       document.body.appendChild(this.renderer.domElement)
-      //
+      // 左上角性能监控
       this.stats = new Stats()
       document.body.appendChild(this.stats.dom)
       //

@@ -24,6 +24,13 @@ export default {
         title: '粒子效果'
       },
       component: () => import('./point')
+    },
+    {
+      path: 'point_obj',
+      meta: {
+        title: '自定义粒子效果'
+      },
+      component: () => import('./point_obj')
     }
   ]
 }
