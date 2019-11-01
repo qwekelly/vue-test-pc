@@ -31,6 +31,13 @@ export default {
         title: '自定义粒子效果'
       },
       component: () => import('./point_obj')
+    },
+    {
+      path: 'point_render',
+      meta: {
+        title: '自定义粒子效果'
+      },
+      component: () => import('./point_render')
     }
   ]
 }
